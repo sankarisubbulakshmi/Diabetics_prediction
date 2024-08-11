@@ -7,9 +7,16 @@ import pickle
 with open('/home/ubuntu/Diabetics_prediction/diabetes.pkl', 'rb') as file:
     data = pickle.load(file)
 
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+page_icon = r"C:\Users\shank\Desktop\Diabetics\diabe.png"
+    
 st.set_page_config(
     page_title="DIABETES PREDICTION",
-   page_icon=r"C:\Users\shank\Desktop\Diabetics\diabe.png"
+   page_icon= get_base64_of_bin_file(page_icon)
 )
 
 st.markdown("""
