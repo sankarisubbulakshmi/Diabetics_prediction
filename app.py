@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 
 # Replace 'file.pkl' with the path to your pickle file
-with open(r'C:\Users\shank\Desktop\Diabetics\diabetes.pkl', 'rb') as file:
+with open(r'/home/ubuntu/Diabetics_prediction/diabetes.pkl', 'rb') as file:
     data = pickle.load(file)
 
 st.set_page_config(
