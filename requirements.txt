@@ -1,2 +1,4 @@
 pandas
 streamlit
+pybase64
+PIL
