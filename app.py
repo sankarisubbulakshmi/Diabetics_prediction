@@ -7,16 +7,11 @@ import pickle
 with open('/home/ubuntu/Diabetics_prediction/diabetes.pkl', 'rb') as file:
     data = pickle.load(file)
 
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
 
-page_icon = r"C:\Users\shank\Desktop\Diabetics\diabe.png"
     
 st.set_page_config(
     page_title="DIABETES PREDICTION",
-   page_icon= get_base64_of_bin_file(page_icon)
+   page_icon= "/home/ubuntu/Diabetics_prediction/diabe.png"
 )
 
 st.markdown("""
@@ -42,9 +37,9 @@ def main():
         Diabetes raises the risk for damage to the eyes, kidneys, nerves, and heart. 
         Diabetes is also linked to some types of cancer. Taking steps to prevent or manage diabetes may lower your risk of developing diabetes health problems.
 """)
-        st.image(r"C:\Users\shank\Desktop\istockphoto-913172026-612x612.jpg")
+        st.image("/home/ubuntu/Diabetics_prediction/glucose.jpg")
         st.header("Signs-and-Symptoms")
-        st.image(r"C:\Users\shank\Desktop\Signs-and-Symptoms-of-Diabetes.jpg")
+        st.image("/home/ubuntu/Diabetics_prediction/Signs.jpg")
         st.header("Treatments")
         st.write("Diabetes treatments can include lifestyle changes, medications, and other options:")
         st.write(""" 
